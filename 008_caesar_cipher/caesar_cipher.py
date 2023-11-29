@@ -27,3 +27,8 @@ def decrypt(text, shift):
     decrypted += shifted
   
     print(f"The decrypted text is {decrypted}")
+
+if direction == "encrypt":
+  encrypt(text=text, shift=shift)
+elif direction == "decrypt":
+  decrypt(text=text, shift=shift)
