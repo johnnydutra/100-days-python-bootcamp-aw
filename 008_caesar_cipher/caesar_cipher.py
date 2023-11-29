@@ -5,7 +5,7 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 def encrypt(text, shift):
-  encoded = ""
+  encrypted = ""
 
   for letter in text:
     position = alphabet.index(letter)
@@ -13,6 +13,17 @@ def encrypt(text, shift):
     shifted = alphabet[new_position]
     encoded += shifted
   
-  print(encoded)
+  print(f"The encrypted text is {encrypted}")
 
 encrypt(text=text, shift=shift)
+
+def decrypt(text, shift):
+  decrypted = ""
+
+  for letter in text:
+    position = alphabet.index(letter)
+    new_position = position - shift
+    shifted = alphabet[new_position]
+    decrypted += shifted
+  
+    print(f"The decrypted text is {decrypted}")
